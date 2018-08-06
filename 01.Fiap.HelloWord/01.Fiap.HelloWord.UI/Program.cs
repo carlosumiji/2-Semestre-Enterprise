@@ -12,9 +12,20 @@ namespace _01.Fiap.HelloWord.UI
         static void Main(string[] args)
         {
             //Instanciar um aluno
-            Aluno aluno = new Aluno();
+            Aluno aluno = new Aluno("Jefty");
             aluno.Nome = "Jefty";//set
             Console.WriteLine(aluno.Nome);//get
+
+            //Intanciar um Professor
+            Professor prof = new Professor("Cabral")
+            {
+                Nome = "Cabaral",
+                Pf = "PF123"
+            };
+
+            var prof2 = new Professor("Parducci");
+
+
 
         }
     }

@@ -6,14 +6,22 @@ using System.Threading.Tasks;
 
 namespace _01.Fiap.HelloWord.UI.Model
 {
-    class Pessoa
+    //classe abstrata : não pode ser intanciada e pode conter métodos abstratos
+    abstract class Pessoa
     {
+        //Construtor
+        public Pessoa(string nome)
+        {
+            _nome = nome;
+        }
+
         //Campos
         private string _nome;
 
         //Propriedades (gets e sets)
-
         public float Peso { get; set; }
+
+        public Genero Genero { get; set; }
 
         public string Nome
         {
@@ -26,5 +34,14 @@ namespace _01.Fiap.HelloWord.UI.Model
                 }
             }
         }
+
+        //métodos
+        //virtual -> permite a sobrescrita de métodos
+        public virtual void Estudar()
+        {
+            Console.WriteLine("Pessoa estudante");
+        }
+
+        public abstract void FazerProva(); 
     }
 }
