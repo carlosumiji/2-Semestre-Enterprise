@@ -22,7 +22,14 @@
         @Html.LabelFor(i => i.Categoria)
         @Html.DropDownListFor(i => i.CategoriaId,
             ViewBag.categorias as SelectList,
+            "Selecione",
             new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(i => i.Contrato)
+        @Html.EnumDropDownListFor(i => i.Contrato,
+            "Selecione",
+            new { @class = "form-control"})
     </div>
     <div class="form-group">
         @Html.LabelFor(i => i.Escritura.Proprietario)
